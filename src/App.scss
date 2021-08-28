@@ -5,6 +5,11 @@
 @import "./styles/contentContainer";
 @import "./styles/videoContainer";
 
+
+.hide{
+  display: none;
+}
+
 .app {
   color: white;
   min-height: 100vh;

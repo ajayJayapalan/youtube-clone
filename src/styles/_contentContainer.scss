@@ -3,7 +3,8 @@
   height: calc(100vh - calc(#{$header-height} + #{$tag-list-height}));
 }
 
-.tag-list {
+.tag__list {
+  scroll-behavior: smooth;
   position: fixed;
   top: $header-height;
   height: $tag-list-height;
@@ -49,4 +50,57 @@
   text-overflow: ellipsis;
 }
 
+.tag__list__scrollbutton {
+  @include dimension(4rem, 3.5rem);
+  position: fixed;
+  top: $header-height;
+  @include flexCenter();
+}
 
+.tag__left {
+  background: linear-gradient(
+    270deg,
+    rgba(32, 32, 32, 0) 0%,
+    rgba(32, 32, 32, 0.5357493339132529) 14%,
+    rgba(32, 32, 32, 0.9559174011401436) 30%
+  );
+  left: $sidebar-width;
+
+  .tag__list__icon__container {
+    justify-content: flex-end;
+    padding-right: 0.1rem;
+  }
+}
+
+.tag__right {
+  background: linear-gradient(
+    90deg,
+    rgba(32, 32, 32, 0) 0%,
+    rgba(32, 32, 32, 0.5357493339132529) 9%,
+    rgba(32, 32, 32, 0.9559174011401436) 27%
+  );
+  right: 0;
+
+  .tag__list__icon__container {
+    justify-content: center;
+  }
+}
+
+.tag__list__icon__container {
+  cursor: pointer;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  color: gray;
+  box-shadow: 0 0 0 .02rem gray;
+
+  &:active {
+    background-color: gray;
+    box-shadow: 0 0 0 .07rem lightgray;
+    color: lightgray;
+    transition: all .7s ease;
+  }
+
+  display: flex;
+  align-items: center;
+}
