@@ -3,18 +3,26 @@
 @import "./styles/header";
 @import "./styles/sidebar";
 @import "./styles/contentContainer";
+@import "./styles/videoContainer";
 
 .app {
   color: white;
   min-height: 100vh;
   max-width: 100vw;
   background-color: $innerskin;
-  padding-top: $header-height;
+  padding-top: calc(#{$header-height} + #{$tag-list-height});
   padding-left: $sidebar-width;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
-
+  @include scrollBar;
 }
 
+html,
+body {
+  @include scrollBar;
+  &::-webkit-scrollbar-track {
+    background: $innerskin;
+  }
+}
 ::-webkit-scrollbar {
   visibility: hidden;
 }

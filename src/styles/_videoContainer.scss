@@ -1,0 +1,21 @@
+.video-container {
+  min-height: calc(100vh - calc(#{$header-height} + #{$tag-list-height}));
+  width: calc(100vw - $sidebar-width);
+  overflow-x: hidden;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 8rem;
+  grid-gap: 2rem;
+  place-items: center;
+  padding: 2rem;
+  background-color: $innerskin;
+}
+
+.video {
+  @include dimension(100%, 100%);
+
+  border: 1px solid white;
+  display: grid;
+  place-items: center;
+}

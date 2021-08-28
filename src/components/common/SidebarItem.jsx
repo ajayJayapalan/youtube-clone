@@ -1,8 +1,8 @@
 import React from "react";
 
-function SidebarItem({Icon, children }) {
+function SidebarItem({Icon, children, onTouch }) {
   return (
-    <div className="sidebar__section__item">
+    <div onClick={onTouch} className="sidebar__section__item">
       <Icon />
       <span className="sidebar__section__item__text">{children}</span>
     </div>
