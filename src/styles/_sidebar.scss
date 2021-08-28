@@ -1,0 +1,79 @@
+.sidebar{
+    position: fixed;
+    top: $header-height;
+    left: 0rem;
+    height: calc(100vh - #{$header-height});
+    width: $sidebar-width;
+    background-color: $outerskin;
+    /* border: .1rem solid white; */
+    padding: 0.625rem 0rem;
+    overflow: auto;
+    overflow-x: hidden;
+
+    &:hover{
+        @include scrollBar;
+    }
+    
+
+  
+}
+
+.sidebar__section{
+    width: calc(#{$sidebar-width} - 1rem);
+    padding: 0rem .1rem 0rem 1.3rem;
+}
+
+.sidebar__section__item{
+    cursor: pointer;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    &:hover{
+        background-color: $paddingskin;
+    }
+}
+
+.sidebar__section__item__text{
+    flex-grow: 2;
+    margin-left: 1.4rem;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.horizontal__line{
+    margin: 0.8125rem 0rem;
+    margin-left: -1.4rem;
+    border: .05rem solid $paddingskin;
+}
+
+.sidebar__section__heading{
+    display: block;
+    text-transform: uppercase;
+    font-weight: lighter;
+    padding-bottom: 0.812rem;
+    color: lightgray;
+}
+
+
+.sidebar__section__item__profile{
+    width: 1.7rem;
+    border-radius: 50%;
+}
+
+.sidebar__section__item__profile__text{
+    flex-grow: 2;
+    margin-left: 1.4rem;
+    font-weight: 400;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.sidebar__section__item__profile__status{
+    margin-left: .5rem;
+    width: 1rem;
+    border-radius: 50%;
+}

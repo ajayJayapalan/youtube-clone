@@ -1,0 +1,56 @@
+
+@function toRem($value) {
+    $result: ($value / 16) + rem;
+
+    @return $result;
+}
+
+@mixin flexCenter(){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flexCenterBetween(){
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin dimension($width,$height){
+    width: #{$width};
+    height: #{$height};
+}
+
+@mixin scrollBar(){
+
+ &::-webkit-scrollbar {
+    width: 7px;
+  }
+  
+  /* Track */
+ /*  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  } */
+  
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(107, 114, 128, .5);
+    border-radius: 5px;
+  }
+  
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+}
+
+
+$outerskin : #202020;
+$innerskin : #121212;
+$paddingskin : #313131;
+$borderskin: #434343;
+
+
+$sidebar-width: 15rem;
+$header-height: toRem(56);

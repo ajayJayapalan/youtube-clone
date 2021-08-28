@@ -1,0 +1,100 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $outerskin;
+  height: $header-height;
+  width: 100vw;
+
+  @include flexCenterBetween;
+  gap: 1rem;
+  padding: 0rem 3rem 0rem 1.5rem;
+}
+
+.header__left {
+  @include flexCenterBetween;
+  @include dimension(8.5rem, auto);
+}
+
+.header__image__container {
+  width: 6rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.header__image {
+  display: inline;
+  height: 4.2rem;
+  object-fit: cover;
+}
+
+.header__searchbar {
+  flex-grow: 2;
+  max-width: 37rem;
+  @include flexCenterBetween;
+
+  gap: 1rem;
+
+  .header__searchbar__container {
+    display: flex;
+  }
+
+  input {
+    @include dimension(30rem, 2rem);
+    padding: 0.2rem 0.8rem;
+    background-color: $innerskin;
+    border: 0.05rem solid $paddingskin;
+    outline: none;
+    color: white;
+    font-size: 1rem;
+    &::placeholder {
+      font-family: "Robot", Helvetica, sans-serif;
+      font-size: 1rem;
+    }
+  }
+
+  .search__icon__container {
+    @include dimension(4rem, 2rem);
+    background-color: $paddingskin;
+    @include flexCenter;
+  }
+}
+
+.header__mic__bg {
+  @include flexCenter;
+  background-color: $innerskin;
+  height: 2rem;
+  width: 2.2rem;
+  border-radius: 50%;
+}
+
+.header__right {
+  @include flexCenterBetween;
+  width: 11rem;
+  gap: 1rem;
+}
+
+.header__noti__container {
+  position: relative;
+}
+
+.header__noti__number {
+  position: absolute;
+  top: -0.275rem;
+  right: -0.35rem;
+  @include flexCenter;
+  background-color: red;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  font-size: 0.7rem;
+}
+
+.header__profile__container {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+}
