@@ -92,10 +92,9 @@
   width: 2rem;
   height: 2rem;
   color: gray;
-  box-shadow: 0 0 0 .02rem gray;
 
   &:active {
-    background-color: gray;
+    background-color: $paddingskin;
     box-shadow: 0 0 0 .07rem lightgray;
     color: lightgray;
     transition: all .7s ease;
